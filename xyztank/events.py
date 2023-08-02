@@ -29,6 +29,14 @@ class SaveMeasurementEvent(Event):
 
 
 @dataclass(frozen=True)
+class ResumeMeasurementEvent(Event):
+    """
+    User selected option "Resume measurement" (event).
+    """
+    pass
+
+
+@dataclass(frozen=True)
 class StopMeasurementEvent(Event):
     """
     User selected option "Stop measurement" (event).

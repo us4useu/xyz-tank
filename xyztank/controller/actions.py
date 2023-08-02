@@ -53,3 +53,13 @@ class StopMeasurementAction(Action):
     def execute(self, ctx: ActionContext):
         model: XyzSystem = ctx.model
         model.stop_measurement()
+
+
+class ResumeMeasurementAction(Action):
+    """
+    Resumes previous measurement.
+    """
+
+    def execute(self, ctx: ActionContext):
+        model: XyzSystem = ctx.model
+        model.start_measurement()
